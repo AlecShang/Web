@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="/bundle.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <style>
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+
+        .v-enter-to,
+        .v-leave {
+            opacity: 1;
+        }
+
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
+    <div id="app">
+    </div>
+    <!-- <div id="app2">
+        <input type="button" v-model="btnLogin" @click=" com1='login'"></input>
+        <input type="button" v-model="btnRegister" @click=" com1='register'"></input>
+        <input type="button" v-model="btnLogin" @click="flag=true"></input>
+        <input type=" button" v-model="btnRegister" @click="flag=false"></input>
+        <transition mode="out-in">
+            <login v-if="flag" :parentmsg="msg"></login>
+            <register v-else=" flag">
+            </register>
+            <component :is="com1"></component>
+        </transition>
+        <p ref="refShow">this is ref log</p>
+        <input type="button" value="show" @click="show">
+    </div> -->
+</body>
+
+</html>
