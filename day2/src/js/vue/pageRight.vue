@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>this is register.vue</h1>
+        <h1>this is right</h1>
     </div>
 </template>
 <script></script>

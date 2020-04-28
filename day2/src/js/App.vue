@@ -1,18 +1,14 @@
 <template>
-    <div>
-        <!-- <h1>this is APP.vue{{a}}</h1> -->
-        <!-- <router-link to="/login">Login</router-link>
-        <router-link to="/register">Register</router-link> -->
-        <div id="imgDiv">
-            <input type="button" @click='isBig' :value="btnName">
-            <ol>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ol>
-        </div> <!-- <img :src="imgUrl" alt="dog.jpg"> -->
+    <div id="d1">
+        <!-- <router-link to="/pageLeft">pageLeft</router-link>
+        <router-link to="/pageRight">pageRight</router-link> -->
+        <div id="d2">
+            <div id="page-left">向左浮动</div>
+            <div id="page-right">向右浮动</div>
+        </div>
+
+        <div id="page-header">未浮动</div>
+        <div id="page-footer"></div>
         <router-view></router-view>
     </div>
 </template>
@@ -22,7 +18,7 @@
         // name: 'UserFace',
         data() {
             return {
-                imgUrl,
+                imgUrl: require('../images/dog.jpg'),
                 imgVal: 'this is imgVal',
                 arr: ['a', 'b', 'c', 'd', 'e'],
                 num: '3.141592653',
@@ -66,69 +62,46 @@
                 var arr = new Array([a], [b])
             },
             isBig: function () {
-                let money = -0;
-                let flag = true;
-                if (money < 0) {
-                    flag = false;
-                    money = -money;
-                }
-                let money2 = Math.floor(money * 100) / 100;
-                if (Math.floor(money2) == money2) {
-                    money2 = money2 + ".00";
-                } else {
-                    if ((Math.floor(money2 * 10) == money2 *
-                            10)) {
-                        money2 = money2 + '0';
-                    } else money2 = money2;
-                }
-                money2 = String(money2);
-                let matchMoney = /(\d+)(\d{3})/;
-                let formatMoney = String(money2);
-                while (matchMoney.test(money2)) {
-                    money2 = money2.replace(matchMoney, '$1' + ',' + '$2');
-                }
-                if (flag == true) {
-                    console.log('$' + money2)
-                } else console.log('(' + '$' + money2 + ')')
+
             },
         },
     }
 </script>
 <style scoped lang="less">
     @baseColor: green;
+    @baseFontSize: 5em;
 
-    img {
-        .wh1000()
+    .widthHeight(@width: 100px, @height: 100px) {
+        width: @width;
+        height: @height;
     }
 
-    li:nth-child(2n),
-    .toggleColor {
-        background-color: @baseColor;
-    }
-
-    .tableCenter() {
+    div {
         text-align: center;
-        display: table;
+    }
+
+    #page-header {
+        .widthHeight(100%, 100px);
+        background-color: gray;
+    }
+
+    #page-left {
+        .widthHeight(40%, 200px);
+        background-color: red;
+        float: left;
 
     }
 
-    .wh1000(@p: 1000) {
-        width: @p;
-        height: @p;
+    #page-right {
+        .widthHeight(40%, 200px);
+        background-color: green;
+        float: right;
     }
 
-    #imgDiv {
-        .tableCenter();
-        .wh1000(1000px);
-        background: red;
-        line-height: 100px;
-        margin-left: 10px;
-        padding-left: 20px;
 
-        >input {
-            border: 20px solid @baseColor;
-            width: 400px;
-            height: 400px;
-        }
+    #page-left:after {
+        content: "";
+        display: block;
+        clear: both;
     }
 </style>
