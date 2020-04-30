@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
 import register from './vue/register.vue'
 import login from './vue/login.vue'
-import pageLeft from './vue/pageLeft.vue'
+import float from './vue/float.vue'
 import pageRight from './vue/pageRight.vue'
 
 // const pageLeft = {
@@ -18,8 +18,8 @@ const router = new VueRouter({
             component: register,
         },
         {
-            path: '/pageLeft',
-            component: pageLeft,
+            path: '/float',
+            component: float,
         },
         {
             path: '/pageRight',

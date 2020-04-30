@@ -7,21 +7,21 @@
 
 </template>
 <script scoped>
-    $(function () {
-        $("#d1").css({
-            'backgroundColor': 'red',
-            'border': '5px solid',
-            // 'width': '600px',
-            // 'height': '600px',
-            // 'float': left,
-        });
-        $("#d1 div").css({
-            'backgroundColor': 'green',
-            'border': '5px solid',
-            'width': '200px',
-            'height': '200px'
-        });
-    });
 </script>
-<style scoped>
+<style scoped lang="less">
+    @baseColor: green;
+    @baseFontSize: 5em;
+
+    .widthHeight(@width: 100px, @height: 100px) {
+        width: @width;
+        height: @height;
+    }
+
+    #d1 {
+        .widthHeight(400px, 400px);
+        background: linear-gradient(90deg, yellow, red);
+        border: 5px solid hsla(0, 0%, 100%, 0.5);
+        background: black;
+
+    }
 </style>
