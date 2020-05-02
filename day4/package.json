@@ -15,6 +15,7 @@
         "@babel/plugin-transform-runtime": "^7.9.0",
         "@babel/preset-env": "^7.9.0",
         "babel-loader": "^8.1.0",
+        "babel-plugin-import": "^1.13.0",
         "css-loader": "^3.4.2",
         "file-loader": "^6.0.0",
         "html-webpack-plugin": "^4.0.3",
@@ -35,6 +36,7 @@
         "bootstrap": "^3.4.1",
         "element-ui": "^2.13.1",
         "jquery": "^3.4.1",
+        "vant": "^2.7.1",
         "webpack-dev-server": "^3.10.3"
     },
     "description": ""
