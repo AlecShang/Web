@@ -9,10 +9,11 @@
 // Mounting ElementUI with parameters 注册到ElementUI并附带参数
 import Vue from '../node_modules/vue/dist/vue.js'
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
 import App from './App.vue'
 import router from './router.js'
-
+import VueResource from 'vue-resource'
+Vue.use(VueRouter)
+Vue.use(VueResource)
 /* element-ui 引入区域 begin */
 // The following is import all 以下是全部引入
 // import ElementUI from 'element-ui'
@@ -41,11 +42,19 @@ import router from './router.js'
 // import 'vant/lib/index.css'
 // Vue.use(Vant)
 // The following is on-demand import 以下是按需引入
-import { Button, Tabbar, TabbarItem } from "vant";
-import 'vant/lib/button/style'
+import { Button, Tabbar, TabbarItem, Cell, CellGroup, Col, Row, Swipe, SwipeItem, Image as VanImage } from "vant";
+import 'vant/lib/index.css'
 Vue.use(Button);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
+Vue.use(Cell);
+Vue.use(CellGroup);
+Vue.use(Col);
+Vue.use(Row);
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+Vue.use(VanImage);
+
 
 
 
