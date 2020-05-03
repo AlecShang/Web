@@ -42,8 +42,22 @@ Vue.use(VueResource)
 // import 'vant/lib/index.css'
 // Vue.use(Vant)
 // The following is on-demand import 以下是按需引入
-import { Button, Tabbar, TabbarItem, Cell, CellGroup, Col, Row, Swipe, SwipeItem, Image as VanImage } from "vant";
 import 'vant/lib/index.css'
+import {
+    Button,
+    Tabbar,
+    TabbarItem,
+    Cell,
+    CellGroup,
+    Col,
+    Row,
+    Swipe,
+    SwipeItem,
+    Image as VanImage,
+    Grid,
+    GridItem,
+    Icon,
+} from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -54,6 +68,9 @@ Vue.use(Row);
 Vue.use(Swipe);
 Vue.use(SwipeItem);
 Vue.use(VanImage);
+Vue.use(Grid);
+Vue.use(GridItem);
+Vue.use(Icon);
 
 
 
