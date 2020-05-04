@@ -5,10 +5,9 @@
                 <van-image width="100%" height="120%" fit="cover" :src="item" />
             </van-swipe-item>
         </van-swipe>
-        <van-grid :border="false" :column-num="3">
+        <van-grid :border="false" :column-num="6">
             <van-grid-item>
-                <van-icon name="like" size="5rem" />
-                <!-- <van-image src="https://img.yzcdn.cn/vant/apple-1.jpg" /> -->
+                <van-image src="https://img.yzcdn.cn/vant/apple-1.jpg" />
             </van-grid-item>
             <van-grid-item>
                 <van-image src="https://img.yzcdn.cn/vant/apple-2.jpg" />
@@ -26,6 +25,9 @@
                 <van-image src="https://img.yzcdn.cn/vant/apple-6.jpg" />
             </van-grid-item>
         </van-grid>
+        <canvas id='roseFlower'>
+
+        </canvas>
         <router-view></router-view>
     </div>
 </template>
@@ -44,7 +46,10 @@
         data() {
             return {
                 active: 0,
-                swipeImgs: [ws01, ws02, ws03, ws04]
+                swipeImgs: [ws01, ws02, ws03, ws04],
+                // b: document.body,
+                // c: document.getElementsByTagName('canvas')[0],
+                // a: c.getContext('2d'),
             }
         },
         methods: {
@@ -53,7 +58,8 @@
                 //     type: 'primary',
                 //     message: index
                 // });
-            }
+            },
+
         },
     }
 </script>
@@ -66,4 +72,6 @@
         height: 10rem;
         /* background-color: #39a9ed; */
     }
+
+    #roseFlower {}
 </style>
