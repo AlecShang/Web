@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>addressPage</h1>
+        <h1>cartPage</h1>
         <router-view></router-view>
     </div>
 </template>

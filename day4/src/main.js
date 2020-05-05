@@ -57,6 +57,12 @@ import {
     Grid,
     GridItem,
     Icon,
+    Search,
+    SwipeCell,
+    Card,
+    Empty,
+    CountDown,
+    Toast,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -71,6 +77,12 @@ Vue.use(VanImage);
 Vue.use(Grid);
 Vue.use(GridItem);
 Vue.use(Icon);
+Vue.use(Search);
+Vue.use(SwipeCell);
+Vue.use(Card);
+Vue.use(Empty);
+Vue.use(CountDown);
+Vue.use(Toast);
 
 
 

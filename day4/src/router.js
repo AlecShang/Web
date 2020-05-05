@@ -1,6 +1,6 @@
 import VueRouter from 'vue-router'
-import searchPage from './js/vue/searchPage.vue'
-import addressPage from './js/vue/addressPage.vue'
+import menuPage from './js/vue/menuPage.vue'
+import cartPage from './js/vue/cartPage.vue'
 import settingPage from './js/vue/settingPage.vue'
 import mainPage from './js/vue/mainPage.vue'
 
@@ -19,12 +19,12 @@ const router = new VueRouter({
             component: mainPage,
         },
         {
-            path: '/searchPage',
-            component: searchPage,
+            path: '/menuPage',
+            component: menuPage,
         },
         {
-            path: '/addressPage',
-            component: addressPage,
+            path: '/cartPage',
+            component: cartPage,
         },
         {
             path: '/settingPage',
