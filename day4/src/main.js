@@ -63,6 +63,15 @@ import {
     Empty,
     CountDown,
     Toast,
+    PullRefresh,
+    TreeSelect,
+    Sidebar,
+    SidebarItem,
+    SubmitBar,
+    RadioGroup,
+    Radio,
+    Checkbox,
+    CheckboxGroup,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -83,9 +92,15 @@ Vue.use(Card);
 Vue.use(Empty);
 Vue.use(CountDown);
 Vue.use(Toast);
-
-
-
+Vue.use(PullRefresh);
+Vue.use(TreeSelect);
+Vue.use(Sidebar);
+Vue.use(SidebarItem);
+Vue.use(SubmitBar);
+Vue.use(RadioGroup);
+Vue.use(Radio);
+Vue.use(Checkbox);
+Vue.use(CheckboxGroup);
 
 /* vant 引入区域 end */
 

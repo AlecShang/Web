@@ -1,5 +1,8 @@
 <template>
     <div>
+
+        <!-- 下拉提示 -->
+
         <!-- 顶部搜索框 -->
         <div>
             <van-row class="iconBackgroundColor">
@@ -128,7 +131,14 @@
                     message: '小鑫鑫这个栏目还没有做好哦',
                     icon: 'like-o',
                 });
-            }
+            },
+            onRefresh: function () {
+                setTimeout(() => {
+                    Toast('刷新成功');
+                    this.isLoading = false;
+                    this.count++;
+                }, 1000);
+            },
 
         },
     }
