@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div>
             <van-row>
                 <van-col span="6">
@@ -19,8 +20,8 @@
                 <van-col span="8">span: 8</van-col>
             </van-row>
         </div>
-        <div></div>
-        <div></div>
+        <van-nav-bar title="标题" left-text="返回" right-text="按钮" left-arrow @click-left="onClickLeft"
+            @click-right="onClickRight" fixed="true" />
         <router-view></router-view>
     </div>
 </template>

@@ -72,6 +72,7 @@ import {
     Radio,
     Checkbox,
     CheckboxGroup,
+    NavBar,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -101,6 +102,7 @@ Vue.use(RadioGroup);
 Vue.use(Radio);
 Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
+Vue.use(NavBar);
 
 /* vant 引入区域 end */
 
