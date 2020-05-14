@@ -1,48 +1,32 @@
 <template>
     <div>
-
-        <div>
-            <van-row>
-                <van-col span="6">
-                    <van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" size="4rem" />
-                </van-col>
-                <van-col span="12">
-                    <span>王鑫鑫</span>
-                </van-col>
-                <van-col span="6">
-                    <van-icon name="manager-o" size="2rem" />
-                    <van-icon name="setting-o" />
-                </van-col>
-            </van-row>
-            <van-row>
-                <van-col span="8">span: 8</van-col>
-                <van-col span="8">span: 8</van-col>
-                <van-col span="8">span: 8</van-col>
-            </van-row>
-        </div>
-        <van-nav-bar title="标题" left-text="返回" right-text="按钮" left-arrow @click-left="onClickLeft"
-            @click-right="onClickRight" fixed="true" />
+        <van-cell-group>
+            <van-field v-model="isShow" placeholder="请输入用户名" />
+        </van-cell-group>
+        <div>{{isShow}}</div>
+        <div id="myDiv" v-if="isShow"></div>
         <router-view></router-view>
     </div>
 </template>
 <script scoped>
     import {
-        Notify
+        Notify,
     } from 'vant';
     export default {
-        props: {
-            icon: {
-                size: "5rem",
-            }
-        },
+        props: {},
         data() {
-            return {}
+            return {
+                myData: '是的',
+                isShow: true,
+            }
         },
         methods: {},
     }
 </script>
 <style scoped lang="less">
-    .van-row {
-        size: 4rem;
+    #myDiv {
+        background-color: green;
+        width: 100px;
+        height: 100px;
     }
 </style>
