@@ -3,8 +3,9 @@
         <van-cell-group>
             <van-field v-model="isShow" placeholder="请输入用户名" />
         </van-cell-group>
+        <van-button type="default" @click="changeShow">默认按钮</van-button>
         <div>{{isShow}}</div>
-        <div id="myDiv" v-if="isShow"></div>
+        <div id="myDiv" v-if="isShow" :class="{'background-color':red}"></div>
         <router-view></router-view>
     </div>
 </template>
@@ -20,7 +21,12 @@
                 isShow: true,
             }
         },
-        methods: {},
+        methods: {
+            changeShow: function () {
+                let _this = this;
+                _this.isShow = "false";
+            }
+        },
     }
 </script>
 <style scoped lang="less">
@@ -28,5 +34,9 @@
         background-color: green;
         width: 100px;
         height: 100px;
+    }
+
+    .bgcolor {
+        background-color: red;
     }
 </style>
