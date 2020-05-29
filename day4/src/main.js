@@ -74,6 +74,8 @@ import {
     CheckboxGroup,
     NavBar,
     Field,
+    Popup,
+    Overlay,
 } from "vant";
 Vue.use(Button);
 Vue.use(Tabbar);
@@ -105,6 +107,8 @@ Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
 Vue.use(NavBar);
 Vue.use(Field);
+Vue.use(Popup);
+Vue.use(Overlay);
 /* vant 引入区域 end */
 
 
@@ -113,7 +117,11 @@ var vm1 = new Vue({
     data: {
 
     },
-    methods: {},
+    methods: {
+        logTxt: function () {
+            console.log('this is Vue')
+        }
+    },
     components: {},
     // function (createElements) { // 可以使用箭头函数c=>c(app)
     //     return createElements(login)

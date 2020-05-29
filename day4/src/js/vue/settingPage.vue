@@ -1,30 +1,44 @@
 <template>
     <div>
         <van-cell-group>
-            <van-field v-model="isShow" placeholder="请输入用户名" />
+            <van-field v-model="showValue" placeholder="请输入用户名" />
         </van-cell-group>
         <van-button type="default" @click="changeShow">默认按钮</van-button>
-        <div>{{isShow}}</div>
-        <div id="myDiv" v-if="isShow" :class="{'background-color':red}"></div>
+        <div>
+            ({{showValue}})
+        </div>
+        <div>Computed:{{computedValue}}</div>
         <router-view></router-view>
     </div>
 </template>
 <script scoped>
     import {
-        Notify,
+        Toast
     } from 'vant';
     export default {
         props: {},
         data() {
             return {
-                myData: '是的',
-                isShow: true,
+                myNum: 100,
+                showValue: '',
             }
         },
         methods: {
             changeShow: function () {
                 let _this = this;
-                _this.isShow = "false";
+                _this.isShow = 'false';
+                _this.overLayShow = true;
+                Toast({
+                    closeOnClick: true,
+                    type: 'success',
+                    message: '成功啦!',
+                });
+
+            }
+        },
+        computed: {
+            computedValue: function () {
+                return this.showValue * 2
             }
         },
     }
